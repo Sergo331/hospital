@@ -13,19 +13,16 @@ namespace задание_7
             int humanInQueue;
             int timeOfReceipt = 10;
             int waitingTimeHour;
-            int waitingTimeMin;
-            int minInHour = 60;
+            int waitingTimeMinutes;
+            int minutesInHour = 60;
 
             Console.Write("Для того, что бы расчитать время ожидания в очереди, введите колличество человек перед вами: ");
             humanInQueue = Convert.ToInt32(Console.ReadLine());
 
-            waitingTimeHour = (humanInQueue * timeOfReceipt) / minInHour;
-            waitingTimeMin = (humanInQueue * timeOfReceipt) % minInHour;
+            waitingTimeHour = (humanInQueue * timeOfReceipt) / minutesInHour;
+            waitingTimeMinutes = (humanInQueue * timeOfReceipt) % minutesInHour;
 
-            Console.WriteLine("Вы должны отстоять в очереди: " +waitingTimeHour + " часа " + waitingTimeMin + " минут.");
-
-
-
+            Console.WriteLine("Вы должны отстоять в очереди: " +waitingTimeHour + " часа " + waitingTimeMinutes+ " минут.");
 
         }
     }
